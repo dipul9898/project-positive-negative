@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background-color: rgb(91, 175, 175);
+            width: 400px;
+            height: 300px;
+            text-align: center;
+        }
+        #sec{
+            padding-top:50px ;
+        }
+        label{
+            background-color: rgb(236, 128, 128);
+            color: rgb(5, 5, 5);
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            margin: 3px;
+            padding: 5px;   
+            font-family: 'Arial Narrow', Arial, sans-serif ;        
+        }
+        #data{
+            background-color: aquamarine;
+            border: none;
+            border-radius:3px ;
+            
+            font-size: large;
+        }
+        #btn{
+            margin-top: 25px;
+            background-color:rgb(4, 105, 4) ;
+            font-size: large;
+            padding-right:50px ;
+            color: rgb(238, 18, 18);
+            border: none;
+            border-radius: 6px;
+            padding-left: 50px;
+            padding-top:3px ;
+            padding-bottom: 3px;
+        }
+        #btn:hover{
+            margin-top: 25px;
+            background-color:rgb(123, 214, 123) ;
+            font-size: large;
+            padding-right:50px ;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 6px;
+            padding-left: 50px;
+          
+        }
+
+        #res{
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            padding-top: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        function check(){
+            var value = document.getElementById('data').value;
+            // var ans = Math.sign(value);
+            // document.getElementById('res').innerText=ans;
+
+            if(value > 0){
+                ans =`${value} is possitive`;
+            } else  if(value < 0){
+                ans =`${value} is negative`;
+            } else  if(value == 0){
+                ans =`${value} is zero`;
+            } else{
+                ans =`${value} is invalid`;
+            }
+            document.getElementById('res').innerText=ans;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="main">
+<section id="sec">
+    <label for="data">Input Value</label>
+    <input type="" id="data" placeholder="Number..."/> <br>
+</section>
+    <button id="btn" onclick="check()">check</button><br>
+
+    <h1 id="res"></h1>
+</div>
+
+</body>
+
+</html>
